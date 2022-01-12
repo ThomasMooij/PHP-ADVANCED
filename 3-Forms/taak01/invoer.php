@@ -23,8 +23,23 @@
         <input type="text" id="Plaatsnaam" name="Plaatsnaam"><br>
         <label for="FavorieteBand">Favoriete muziekband:</label><br>
         <input type="text" id="FavorieteBand" name="FavorieteBand"><br>
-        <input type="submit" value="Verzendknop">
+        <input type="submit" value="Verzendknop"><br>
 
+        <label for="Geslacht">Geslacht:</label>
+        <label for="Man">Man</label>
+        <input type="radio" id="Man" name="Geslacht">
+        <label for="Vrouw">Vrouw</label>
+        <input type="radio" id="Vrouw" name="Geslacht">
+
+        <label for="Kleur">Kleur</label>
+        <select id="kleur" name="kleur">
+            <?php 
+            $lievelingskleuren = ['blue' , 'red' , 'yellow' , 'green'];
+            foreach($lievelingskleuren as $value){
+                 echo "<option>".$value."</option>";
+            }
+            ?>
+        </select>
     </form>
 </body>
 </html>
