@@ -3,7 +3,7 @@ $dagen = array("maandag", "dinsadg", "woensdag", "donderdag", "vrijdag", "zaterd
 
 foreach($dagen as $value){
 
-echo "<li>".$value."<?li><br>";
+echo "<ul><li>".$value."<?li></ul><br>";
 
 }
 
