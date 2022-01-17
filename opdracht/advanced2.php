@@ -11,9 +11,8 @@
 <?php 
 $thomas = array("naam"=>$_POST["Voornaam"], "achternaam"=>$_POST["Achternaam"], "klas"=>$_POST["Klas"]);
 foreach($thomas as $value){
-    echo "<tr>";
-    echo "<td style='border: ".$_POST['border']."px solid; padding:".$_POST['padding']."px;'>$value</td>";
-    echo "</tr>";
+    echo "<tr><td style='border: ".$_POST['border']."px solid; padding:".$_POST['padding']."px;'>$value</td></tr>";
+   
    
 }
 ?>
