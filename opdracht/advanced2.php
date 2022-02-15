@@ -4,17 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tabel</title>
+    <title>Document</title>
 </head>
 <body>
-<body style=background-color:<?php echo $_POST["kleuren"]?>>
-<?php 
-$thomas = array("naam"=>$_POST["Voornaam"], "achternaam"=>$_POST["Achternaam"], "klas"=>$_POST["Klas"]);
-foreach($thomas as $value){
-    echo "<tr><td style='border: ".$_POST['border']."px solid; padding:".$_POST['padding']."px;'>$value</td></tr>";
-   
-   
-}
+
+<?php
+    function maakRij($rij1, $rij2){
+        echo "<tr>";
+        echo "<td style='border: ".$_POST['border-dikte']."px solid; color:".$_POST['color']."; padding:".$_POST['padding']."px;'>$rij1</td>";
+        echo "<td style='border: ".$_POST['border-dikte']."px solid; color:".$_POST['color']."; padding:".$_POST['padding']."px;'>$rij2</td>";
+        echo "</tr>";
+    }
+
+    $array1 = [
+    'naam'     => $_POST['naam'],
+    'leeftijd' => $_POST['leeftijd'],
+    'lengte'   => $_POST['lengte'],
+    'sport'    => $_POST['sport'],
+    'hobbies'  => $_POST['hobbies'],
+    ]; 
+
+    echo "<table style='border:  ".$_POST['border-dikte']."px solid' width='300' cellspacing='0'>";
+
+    foreach($ik as $sleutel =>$iksleutel){
+         maakRij($ik, $iksleutel);
+    }
+    echo "</table>"
 ?>
 </body>
 </html>

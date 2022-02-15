@@ -4,47 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced-php-1</title>
+    <title>Document</title>
 </head>
 <body>
-   <form action="advanced2.php" method="post">
-   <label for="Voornaam">Voornaam:</label><br>
-        <input type="text" id="voornaam" name="Voornaam"><br>
-        <label for="Achternaam">Achternaam:</label><br>
-        <input type="text" id="Achternaam" name="Achternaam"><br>
-        <label for="Klas">Klas:</label><br>
-        <input type="text" id="Klas" name="Klas"><br>
-        
-   <label for="kleuren">Selecteer tekst kleur</label>
-        <select id="kleuren" name="kleuren">
-            <?php 
-           $kleuren = array("red", "blue", "green", "black", "brown");
-            foreach($kleuren as $value){
-                 echo "<option>".$value."</option>";
-            }
-            ?>
-        </select>
-        <label for="border">Selecteer border size</label>
-        <select id="border" name="border">
-            <?php 
-           $border = array("1px", "2px", "5px", "10px", "12px");
-            foreach($border as $value){
-                 echo "<option>".$value."</option>";
-            }
-            ?>
-        </select>
-        <label for="padding">Selecteer paddig size</label>
-        <select id="padding" name="padding">
-            <?php 
-           $padding = array("1px", "2px", "5px", "10px", "12px");
-            foreach($padding as $value){
-                 echo "<option>".$value."</option>";
-            }
-            ?>
-        </select>
-        <br>
-        <input type="submit" value="Verzendknop">
-
-    </form>
+<form name="Form" method="POST" action="advanced2.php">
+<p>kleur: 
+    <select name="color"></p>
+        <?php 
+        $kleuren = ['red' , 'blue' , 'green' , 'black' , 'brown'];
+        foreach($kleuren as $kleur){
+            echo "<option value='$kleur' selected>$kleur</option>";
+        }
+        ?>
+    </select></p>
+<p>Naam: <input name="naam"></p>
+<p>Leeftijd: <input name="leeftijd"></p>
+<p>Lengte: <input name="lengte"></p>
+<p>Sport: <input name="sport"></p>
+<p>Hobby's: <input name="hobbies"></p>
+<p>Tabel-border dikte: <input name="border-dikte"></p>
+<p>padding: <input name="padding"></p>
+<button>Verstuur</button>
+    </select></p>
+</form>
 </body>
-</html>
