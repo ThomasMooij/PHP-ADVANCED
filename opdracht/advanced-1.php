@@ -30,8 +30,8 @@
         ?>
     </select></p>
 
-    <p>tabel-border dikte: <input name="border-dikte"></p>
-    <p>padding: <input name="padding"></p>
+    <p>tabelranddikte (px): <input name="border-dikte"></p>
+    <p>cel-padding (px): <input name="padding"></p>
 
 <button>Verstuur!</button>
 </form>
